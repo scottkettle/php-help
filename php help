@@ -1,0 +1,38 @@
+
+<header>
+  <div class="container">
+    <div id="branding">
+      <h1> <span class = "Highlight">Northumbria</span> Music Company</h1>
+  	</div>
+          
+          <nav>
+             <ul>
+               <li><a href="index.php">Home</a></li>
+               <li><a href="orderRecordsForm.php">Select Records</a></li>
+               <li><a href="creditsPage.html">Credits Page</a></li>
+             </ul>
+        
+            <div class="navLogin">
+            	
+              <?php
+            	  if(!empty($_SESSION['logged-in'])){
+            	  	echo' <form action = "logoutProcess.php" method="POST">
+            	  	<button type="submit" name="submit">Logout</button>
+            	  	</form>';
+            	  
+            	  }  else {
+
+            	   echo'<br> <form method="post" action="loginProcess.php">
+                     <input type="text"  name="username"  placeholder="Enter your Username" />
+                     <input type="password" name="password" placeholder="Enter your Password" />
+                     <input type="submit" value="Sign in" />
+                     </form>';
+
+            	  }
+
+            	?>
+
+            </div>
+          </nav>
+  </div>
+</header>
