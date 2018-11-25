@@ -1,3 +1,12 @@
+<?php
+ini_set("session.session_save_path", "/home/unn_w16040109/sessionData");
+session_start('logged-in');
+require_once('functions.php');
+
+echo makePageStart();
+
+?>
+
 
 <header>
   <div class="container">
@@ -36,3 +45,11 @@
           </nav>
   </div>
 </header>
+
+<?php    
+
+echo makeFooter();
+
+echo makePageEnd();
+
+?>
